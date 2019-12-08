@@ -1,8 +1,9 @@
+//
+
 package JavaStudy8;
 
 public class main {
 	public static int[] merge(int[] arr1, int[] arr2) {
-		// fill here!
 		int index1 = 0;
 		int index2 = 0;
 		int[] merged = new int[arr1.length + arr2.length];
