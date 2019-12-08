@@ -1,3 +1,5 @@
+//github의 오류를 고치기 위해 push하는 파일
+
 package JavaStduy12;
 
 public class Main {
