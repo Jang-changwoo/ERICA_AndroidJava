@@ -1,5 +1,7 @@
 package JavaStudy4;
 
+//사용자의 입력값을 통해 변수를 받고 값을 계산하여 등급을 나눈다.
+
 import java.util.Scanner;
 
 class Main {
