@@ -1,11 +1,16 @@
 package JavaStudy6;
 
+//은행계좌 입출금 시스템
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
+//계좌선언
 class BankAccount {
+	//잔고 선언
 	private int balance;
-
+	
+	//초기 금액이 0이상일땐 초기금액 설정, 0이하일때 0으로 설정
 	public BankAccount(int initial_amount) {
 		if (initial_amount >= 0)
 			balance = initial_amount;
@@ -13,10 +18,12 @@ class BankAccount {
 			balance = 0;
 	}
 
+	//잔고 불러오는 함수
 	public int getBalance() {
 		return balance;
 	}
 
+	//입금
 	public boolean deposit(int amount) {
 		boolean result = false;
 		if (amount < 0)
@@ -28,6 +35,7 @@ class BankAccount {
 		return result;
 	}
 
+	//출금
 	public boolean withdraw(int amount) {
 		boolean result = false;
 		if (amount < 0)
@@ -42,24 +50,29 @@ class BankAccount {
 	}
 }
 
+//사용자의 입력을 받아서 처리하는 시스템
 class BankReader {
 	private String input_line = "";
 	private Scanner scan;
 
+	//입력받기 메소드
 	public BankReader() {
 		scan = new Scanner(System.in);
 	}
 
+	//제일 먼저 나오는 커맨드 읽기
 	public char readCommand(String message) {
 		System.out.print(message);
 		input_line = scan.nextLine().toUpperCase();
 		return input_line.charAt(0);
 	}
 
+	//뒤에나오는 금액 읽기
 	public int readAmount() {
 		int answer = 0;
 		String s = input_line.substring(1, input_line.length());
 
+		//달러를 센트로 바꾼다
 		if (s.length() > 0) {
 			double dollars_cents = new Double(s).doubleValue();
 			answer = (int) (dollars_cents * 100);
@@ -69,10 +82,12 @@ class BankReader {
 	}
 }
 
+//계좌에 쓰기
 class BankWriter {
 	private BankAccount bank;
 	private String last_transaction = "";
 
+	//계좌 쓰는 메소드
 	public BankWriter(BankAccount b) {
 		bank = b;
 	}
@@ -81,11 +96,13 @@ class BankWriter {
 		return new DecimalFormat("0.00").format(i / 100.0);
 	}
 
+	//입력상황에 맞는 메시지를 출력하는 메소드
 	public void setTransaction(String message, int amount) {
 		last_transaction = message + " " + unconvert(amount);
 		System.out.println("transaction: " + last_transaction);
 	}
 
+	//입력상황에 맞는 메시지를 출력하는 메소드
 	public void setTransaction(String message) {
 		last_transaction = message;
 		System.out.println("transaction: " + last_transaction);
@@ -93,6 +110,8 @@ class BankWriter {
 
 }
 
+
+//구동에 필요한 계좌관리 시스템
 class AccountController {
 	private BankReader reader; // input view
 	private BankAccount primary_account, secondary_account, account;
@@ -108,11 +127,13 @@ class AccountController {
 		writer = primary_writer;
 	}
 
+	//선택되있는 계좌를 바꾸는 메소드
 	public void resetAccount(BankAccount new_account, BankWriter new_writer) {
 		account = new_account;
 		writer = new_writer;
 	}
 
+	//커맨드에 맞춰서 각자 실행한다
 	public void processTransactions() {
 		char command = reader.readCommand("Commands (P/S/D/W/T/I/Q): ");
 
@@ -182,10 +203,12 @@ class AccountController {
 
 			break;
 		}
+		//정해진 값이 아닐경우 오류메시지
 		default:
 			writer.setTransaction("invalid commpand: " + command);
 			break;
 		}
+		//실행후 계좌 출력
 		System.out.println("=======================");
 		System.out.println("== currently active : " + ((account == primary_account) ? "primary" : "secondary"));
 		System.out.println("== primary account : " + primary_writer.unconvert(primary_account.getBalance()));
