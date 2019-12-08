@@ -1,9 +1,12 @@
+//입력 문자열에서 모음의 개수 찾기
+
 package JavaStudy7;
 import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
 		System.out.print("Please enter a sentence:");
+		//모음 변수 선언 및 초기화
 		int a = 0;
 		int e = 0;
 		int i = 0;
@@ -12,10 +15,14 @@ public class Main {
 		int consonant = 0;
 		int num = 0;
 		Scanner scan = new Scanner(System.in);
+		//문자열 입력받기
 		String sentence = scan.nextLine();
+		//문자열에서 공백문자 없애기
 		sentence = sentence.replaceAll(" ", "");
+		//문자열에서 모두 소문자로 바꾸기
 		sentence = sentence.toLowerCase();
 
+		//문자열의 길이만큼 실행
 		while (num < sentence.length()) {
 			switch (sentence.charAt(num)) {
 			case 'a':
