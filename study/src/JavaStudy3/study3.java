@@ -1,5 +1,5 @@
 package JavaStudy3;
-
+//다른 클래스에서 변수의 값들을 바꾸고 불러온다.
 public class study3 {
 
 	public static void main(String[] args) {
