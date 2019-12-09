@@ -33,3 +33,7 @@ study파일에 있는 JavaStudy3부터는 ubuntu의 이클립스 환경에서 ja
 - JavaStudy10 : GUI2, 이클립스에서 GUI를 이용한 환전기를 만든다.
 
 - JavaStudy11 : GUI3, 이클립스에서 GUI와 이벤트 처리기를 이용해 숫자 찾기 게임을 만든다.
+
+- JavaStudy12 : String을 입력받아서 길이가 20이 넘거나 null일때 예외처리를 해준다.
+
+- JavaStudy13 : String을 받아서 그 안에 있는 정수를 찾아 정수의 합을 구한다. 다른 문자가 있다면 0으로 반환한다.
