@@ -49,8 +49,8 @@ Android Studio를 사용하기 위해 Ubuntu에 Andorid Studio를 설치하고 j
 핸드폰을 연결하여 핸드폰에서 구현을 하는 방법이 있다. 버추얼박스의 우분투에서는 두 가지 기능이 모두 구현되지 않아서
 버추얼박스에 다른 가상머신을 만들어서 우분투에 연결시킨뒤 구현해보려고 한다.
 
-- https://github.com/limjinha95/DEMS_MoleGame의 두더지게임의 코드를 기반으로 비슷하지만 기능이 추가된 농장가꾸기 게임을 만들어보려고 한다.
-- https://kutar37.tistory.com/entry/Thread-handler 링크에서 안드로이드 스튜디오의 Thread handler의 기능을 구현하였다.
+- https://github.com/limjinha95/DEMS_MoleGame 의 두더지게임의 코드를 기반으로 비슷하지만 기능이 추가된 농장가꾸기 게임을 만들어보려고 한다.
+- https://kutar37.tistory.com/entry/Thread-handler%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%91%90%EB%8D%94%EC%A7%80%EA%B2%8C%EC%9E%84-2 링크에서 안드로이드 스튜디오의 Thread handler의 기능을 구현하였다.
 
 ------------------------------------------------------------------------------------------
 
