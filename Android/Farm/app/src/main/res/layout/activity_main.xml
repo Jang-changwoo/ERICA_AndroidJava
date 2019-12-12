@@ -27,15 +27,15 @@
         android:gravity="end" />
 
 
-    <androidx.gridlayout.widget.GridLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="120dp"
-        app:columnCount="1"
-        app:rowCount="3">
+        android:columnCount="1"
+        android:rowCount="3">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -262,7 +262,7 @@
             </FrameLayout>
         </LinearLayout>
 
-    </androidx.gridlayout.widget.GridLayout>
+    </GridLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -348,6 +348,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/tv_round"
             android:gravity="center"
+            android:text="@string/apple_price"
             android:textSize="12dp"
             android:textStyle="bold" />
 
@@ -357,6 +358,7 @@
             android:layout_weight="1"
             android:background="@drawable/tv_round"
             android:gravity="center"
+            android:text="@string/mandarin_price"
             android:textSize="12dp"
             android:textStyle="bold" />
 
@@ -366,6 +368,7 @@
             android:layout_weight="1"
             android:background="@drawable/tv_round"
             android:gravity="center"
+            android:text="@string/avocado_price"
             android:textSize="12dp"
             android:textStyle="bold" />
 
@@ -375,6 +378,7 @@
             android:layout_weight="1"
             android:background="@drawable/tv_round"
             android:gravity="center"
+            android:text="@string/shovel_price"
             android:textSize="12dp"
             android:textStyle="bold" />
 
@@ -384,6 +388,7 @@
             android:layout_weight="1"
             android:background="@drawable/tv_round"
             android:gravity="center"
+            android:text="@string/watering_price"
             android:textSize="12dp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -408,6 +413,7 @@
         android:layout_marginEnd="1dp"
         android:background="@drawable/tv_round"
         android:gravity="center"
+        android:text="@string/step_up"
         android:textSize="11dp"
         android:textStyle="bold" />
 
@@ -431,7 +437,7 @@
         android:layout_marginEnd="1dp"
         android:background="@drawable/tv_round"
         android:gravity="center"
-        android:text="apple_up"
+        android:text="@string/apple_up"
         android:textSize="10dp"
         android:textStyle="bold" />
 
@@ -455,6 +461,7 @@
         android:layout_marginEnd="1dp"
         android:background="@drawable/tv_round"
         android:gravity="center"
+        android:text="@string/mandarin_up"
         android:textSize="10dp"
         android:textStyle="bold" />
 
@@ -477,7 +484,8 @@
         android:layout_marginTop="335dp"
         android:layout_marginEnd="1dp"
         android:background="@drawable/tv_round"
-        android:gravity="center
+        android:gravity="center"
+        android:text="@string/avocado_up"
         android:textSize="10dp"
         android:textStyle="bold" />
 
