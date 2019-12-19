@@ -12,6 +12,8 @@ public class main extends JFrame {
 
 		//새로운 Frame 생성
 		JFrame frame = new JFrame("패널 포함");
+		//나가기 생성 디폴트값
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		//Frame위에 Panel 생성
 		JPanel panel = new JPanel();
@@ -21,8 +23,9 @@ public class main extends JFrame {
 		panel.setPreferredSize(new Dimension(200, 100));
 		//frame에 panel추가
 		frame.getContentPane().add(panel);
+		//frame을 디스플레이 한다.
 		frame.pack();
-		
+		//frame을 보여주기
 		frame.setVisible(true);
 
 	}
