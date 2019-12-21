@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         already_MaxSpeedDialog();
 
 // 이전에 나갈때 저장한 돈 가져오기
-        total_money = appData.getInt("money", 10000000);
+        total_money = appData.getInt("money", 100000);
 // 돈 바로 적용
         moneyHandler.sendEmptyMessage(0);
 
